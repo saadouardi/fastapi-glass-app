@@ -38,7 +38,7 @@
     "sass": "^1.51.0",
     "typescript": "^5.5.4",
     "vite": "^5.4.2",
-    "vite-plugin-dynamic-import": "^1.4.0"
+    "vite-plugin-dynamic-import": "^1.6.0"
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
