@@ -1,77 +1,93 @@
-# Image gallery
+# FastAPI Glass App
 
-The image gallery enables users to search, browse, and view all our valuable imagery. Read [the product documentation](./docs/README.md) to understand the status of the product and what needs to be worked on.
+A full-stack image-gallery application built with **React** and **FastAPI**.
 
-## Development
+The project was created to strengthen my understanding of Python backend architecture, API validation, relational persistence, frontend/backend integration, and automated API testing.
 
-The frontend application is written in React and uses hooks for state management.
-The backend application is written in FastAPI and uses SQLite for data persistence.
+## Tech stack
 
-### Installation
+**Frontend**
+- React
+- Vite
 
-First, clone this repository.
+**Backend**
+- Python
+- FastAPI
+- Uvicorn
+- SQLite
 
-#### Frontend
+**Testing & API tools**
+- Pytest
+- Swagger / OpenAPI
 
-Change to the `frontend/` directory of the cloned repository. Then, install the dependencies using the following command:
+## Features
 
-```shell
-$npm install
+- Browse and view image data
+- Search image content
+- FastAPI REST endpoints
+- SQLite persistence
+- Frontend/backend separation
+- API documentation through Swagger UI
+- Backend tests with Pytest
+
+## Project structure
+
+```text
+fastapi-glass-app/
+├── frontend/
+├── backend/
+├── docs/
+├── image_data.db
+└── README.md
 ```
 
-##### Running the application
+## Local setup
 
-This application uses Vite for fast building and hot module reloading. You can run the application using the following command:
+### Frontend
 
-```shell
-$npm run dev
+```bash
+cd frontend
+npm install
+npm run dev
 ```
 
-#### Backend
+### Backend
 
-Change to the `backend/` directory of the cloned repository. Then, install the dependencies in a virtual environment using the following commands:
+Python 3.10+ is recommended.
 
-> [!WARNING]
->
-> Please use Python 3.10 or above.
-
-```shell
-$ python --version
-$ python -m venv .venv
-$ source .venv/bin/activate
-(.venv)$ python -m pip install .
-$ Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+```bash
+cd backend
+python -m venv .venv
 ```
 
-#### Running the application for backend
+Activate the environment, install the project dependencies, then start the API:
 
-This project uses uvicorn to run the FastAPI application. You can run the application using the following command:
+```bash
+uvicorn main:app --host 0.0.0.0 --port 9000 --reload
+```
 
-### shell
+Swagger UI is available at:
 
-(.venv)$ uvicorn main:app --host 0.0.0.0 --port 9000 --reload
+```text
+http://127.0.0.1:9000/docs
+```
 
-### commands
+## Testing
 
-$pip install pytest requests
-$pytest .\tests\test_api.py $to test
-$pip install -r requirements.txt
+```bash
+pytest
+```
 
-### Questions
+## What this project demonstrates
 
-- what is Swagger UI: http://127.0.0.1:9000/docs
-- using Django or FastAPI as a backend it could be connected to a frontend without using templates? it could be connected to both?
-- how to create requirements file and download all the dependencies inside it?
-- while installing dependencies, should i be in env mode or not? or it doesn't matter
+- FastAPI application structure
+- Request/response validation
+- REST endpoint development
+- Relational persistence with SQLite
+- API testing
+- Frontend/backend integration concepts
 
-#### Info
+## Author
 
-#### from unittest.mock import patch
-
-- is used to mock database connections so we don't need a real database for testing
-
-## TO DO
-
-- create an APP without searching or googling it(models, views, etc)
-- create tests for each file
-- connect the backend with the frontend
+**Saad Ouardi**  
+[Portfolio](https://saadouardi.vercel.app) · [LinkedIn](https://www.linkedin.com/in/saad-ouardi)
